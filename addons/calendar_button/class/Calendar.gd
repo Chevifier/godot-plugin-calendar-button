@@ -42,28 +42,28 @@ func get_month_name(month : int) -> String:
 	return MONTH_NAME[month - 1]
 
 func hour() -> int:
-	return OS.get_datetime()["hour"]
+	return Time.get_datetime_dict_from_system()["hour"]
 
 func minute() -> int:
-	return OS.get_datetime()["minute"]
+	return  Time.get_datetime_dict_from_system()["minute"]
 
 func second() -> int:
-	return OS.get_datetime()["second"]
+	return  Time.get_datetime_dict_from_system()["second"]
 
 func day() -> int:
-	return OS.get_datetime()["day"]
+	return  Time.get_datetime_dict_from_system()["day"]
 
 func weekday() -> int:
-	return OS.get_datetime()["weekday"]
+	return  Time.get_datetime_dict_from_system()["weekday"]
 
 func month() -> int:
-	return OS.get_datetime()["month"]
+	return  Time.get_datetime_dict_from_system()["month"]
 
 func year() -> int:
-	return OS.get_datetime()["year"]
+	return  Time.get_datetime_dict_from_system()["year"]
 
 func daylight_savings_time() -> int:
 	return dst()
 
 func dst() -> int:
-	return OS.get_datetime()["dst"]
+	return  Time.get_datetime_dict_from_system()["dst"]

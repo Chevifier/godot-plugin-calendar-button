@@ -1,6 +1,6 @@
 class_name WindowRestrictor
 
-func restrict_popup_inside_screen(var popup : Popup):
+func restrict_popup_inside_screen(popup : Popup):
 	var calendar_container = popup.get_parent()
 	var popup_container = popup.get_node("PanelContainer")
 	
@@ -10,8 +10,8 @@ func restrict_popup_inside_screen(var popup : Popup):
 	var calendar_icon_y_pos = calendar_container.get_global_position().y
 	var calendar_icon_x_size = calendar_container.get_size().x
 	var calendar_icon_y_size = calendar_container.get_size().y
-	var window_size_x = OS.get_window_size().x
-	var window_size_y = OS.get_window_size().y
+	var window_size_x = DisplayServer.window_get_size().x
+	var window_size_y = DisplayServer.window_get_size().y
 	
 	var pos_x = 0
 	if(window_size_x > (popup_x_size + calendar_icon_x_size/2)):
@@ -29,4 +29,4 @@ func restrict_popup_inside_screen(var popup : Popup):
 		else:
 			pos_y = window_size_y - popup_y_size
 			
-	popup.set_global_position(Vector2(pos_x, pos_y))
+	popup.popup()
