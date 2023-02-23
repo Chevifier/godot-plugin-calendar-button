@@ -30,12 +30,14 @@ Very easy to use.
 
 **Code Example:**
 
-				func _ready(): 
-					var calendar_button_node = get_node("path/to/CalendarButton")
-					calendar_button_node.date_selected.connect(your_func_here)
-
-				func your_func_here(date_obj):
-					print(date_obj.date()) # Use the date_obj wisely :)
+```
+func _ready(): 
+	var calendar_button_node = get_node("path/to/CalendarButton")
+	calendar_button_node.date_selected.connect(your_func_here)
+	
+func your_func_here(date_obj):
+	print(date_obj.date()) # Use the date_obj wisely :)
+```
 
 -----------
 
