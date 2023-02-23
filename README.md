@@ -12,9 +12,9 @@ Very easy to use.
 
 1. Place CalendarButton in your scene
 2. From a script of your choice, get the CalendarButton node
-3. Using the node, add a connection: calendar_button_node.connect("date_selected", self, "your_func_here")
-4. Create a function "func your_func_here(date_obj)". Note that it expect an argument.
-5. Do a test inside "your_func_here", such as:  print(date_obj.date("DD-MM-YYYY"))
+3. Using the node, add a connection: `calendar_button_node.date_selected.connect(your_func_here)`
+4. Create a function `your_func_here(date_obj)`. Note that it expect an argument.
+5. Do a test inside `your_func_here`, such as:  `print(date_obj.date("DD-MM-YYYY"))`
 
 ### Manual Plugin Installation
 
@@ -30,12 +30,12 @@ Very easy to use.
 
 **Code Example:**
 
-func _ready():
-	var calendar_button_node = get_node("path/to/CalendarButton")
-	calendar_button_node.connect("date_selected", self, "your_func_here")
+				func _ready(): 
+					var calendar_button_node = get_node("path/to/CalendarButton")
+					calendar_button_node.date_selected.connect(your_func_here)
 
-func your_func_here(date_obj):
-	print(date_obj.date()) # Use the date_obj wisely :)
+				func your_func_here(date_obj):
+					print(date_obj.date()) # Use the date_obj wisely :)
 
 -----------
 
